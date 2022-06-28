@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './page1.dart';
-import 'ListViewPage.dart';
+import 'CustomUIPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,13 +18,17 @@ class MyApp extends StatelessWidget {
   // }
 
   //ListView Demo
+  // @override
+  // Widget build(BuildContext context) => MaterialApp(
+  //       theme: ThemeData(primaryColor: Colors.lightBlue[800]),
+  //       home: const ListViewPage(
+  //         title: "Custom UI",
+  //       ),
+  //     );
+
   @override
   Widget build(BuildContext context) => MaterialApp(
-        theme: ThemeData(primaryColor: Colors.lightBlue[800]),
-        home: const ListViewPage(
-          title: "Custom UI",
-        ),
-      );
+    theme: ThemeData(primaryColor: Colors.lightBlue[800]),
+    home: CustomUIPage(title: "Custom"),
+  );
 }
-
-
