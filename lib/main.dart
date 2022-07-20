@@ -29,6 +29,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
     theme: ThemeData(primaryColor: Colors.lightBlue[800]),
-    home: CustomUIPage(title: "Custom"),
+    home: CustomUIPage(title: "Custom UI"),
   );
 }
