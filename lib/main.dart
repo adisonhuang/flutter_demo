@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/GesturePage.dart';
 import './page1.dart';
 import 'CustomUIPage.dart';
 
@@ -26,9 +27,15 @@ class MyApp extends StatelessWidget {
   //       ),
   //     );
 
+  // Custom UI
+  // @override
+  // Widget build(BuildContext context) => MaterialApp(
+  //   theme: ThemeData(primaryColor: Colors.lightBlue[800]),
+  //   home: CustomUIPage(title: "Custom UI"),
+  // ); 
   @override
   Widget build(BuildContext context) => MaterialApp(
     theme: ThemeData(primaryColor: Colors.lightBlue[800]),
-    home: CustomUIPage(title: "Custom UI"),
+    home: GuesturePage(title: "Guesture UI"),
   );
 }
