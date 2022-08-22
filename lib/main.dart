@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/GesturePage.dart';
 import 'package:flutter_demo/RouterPage.dart';
+import 'package:flutter_demo/animation/AnimatePage.dart';
 import 'package:flutter_demo/transfer/transfer_page.dart';
 import './page1.dart';
 import 'CustomUIPage.dart';
@@ -52,18 +53,30 @@ class MyApp extends StatelessWidget {
   //       home: TransferPage(title: "数据传递"),
   //     );
 
-   Widget build(BuildContext context) {
-    return  MaterialApp(
-      title: 'Navigation',
-      //路由表
-      routes:{
-        "second_page":(context)=>SecondPage(),
-        "third_page":(context)=>ThirdPage()
-      },
-      //路由异常页面
-      onUnknownRoute: (RouteSettings setting) => MaterialPageRoute(builder: (context) => UnknownPage()),
-      home:  FirstPage(),
+  //  Widget build(BuildContext context) {
+  //   return  MaterialApp(
+  //     title: 'Navigation',
+  //     //路由表
+  //     routes:{
+  //       "second_page":(context)=>SecondPage(),
+  //       "third_page":(context)=>ThirdPage()
+  //     },
+  //     //路由异常页面
+  //     onUnknownRoute: (RouteSettings setting) => MaterialPageRoute(builder: (context) => UnknownPage()),
+  //     home:  FirstPage(),
+  //   );
+
+    @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home:  AnimatePage(title: "animate"),
     );
+  
   }
 }
 
